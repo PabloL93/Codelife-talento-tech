@@ -1,0 +1,709 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*BODY*/
+body {
+    font-family: poppins;
+    background-color: rgb(195, 195, 195);
+    position: absolute;
+
+}
+
+
+
+body::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: rgb(119, 127, 170);
+    opacity: .7;
+
+}
+
+/*FINAL BODY*/
+
+h1,
+h2,
+h3,
+p {
+    color: beige;
+
+}
+
+/* HEADER*/
+.header {
+    background-color: rgb(16, 15, 15);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 5px 10;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header .logo {
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.header .logo img {
+    height: 50px;
+    width: auto;
+    padding: 5px;
+    padding-left: 15px;
+    margin: 5px;
+}
+
+.header .barra-de-navegacion {
+    list-style: none;
+}
+
+.header .barra-de-navegacion li {
+    display: inline-block;
+    padding: 0 20px;
+
+}
+
+.header .barra-de-navegacion a {
+    font-size: 700;
+    color: white;
+    text-decoration: none;
+}
+
+.header .barra-de-navegacion li a:hover {
+    color: aquamarine;
+}
+
+.header .boton-Ingresar button {
+    font-size: 700;
+    color: rgb(30, 33, 35);
+    padding: 9px 25px;
+    background: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 10px;
+    margin-right: 20px;
+
+}
+
+.header .boton-Ingresar button:hover {
+    color: rgb(43, 226, 116);
+    background: #5c7f2e;
+}
+
+/* final HEADER*/
+/*--------------*/
+/*seccion Bienvenida*/
+
+.main {
+    margin-top: 20px;
+    width: 100%;
+}
+
+.intro {
+    width: 90%;
+    margin: auto;
+    max-width: 1366px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bienvenida {
+    align-items: center;
+    display: flex;
+    font-size: 50px;
+}
+
+.subtitulo {
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+
+.material-symbols-outlined {
+    font-size: 35px;
+    color: antiquewhite;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 6px;
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 350,
+        'GRAD' 0,
+        'opsz' 24
+}
+
+/*final Bienvenida*/
+/*----------*/
+/*---reseña y video----*/
+
+.intro-video {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 5%;
+    background-color: rgba(84, 84, 84, 0.4);
+    border-radius: 10px;
+    box-shadow: 10px 10px 15px 0 #04314455;
+}
+
+.Introduccion p {
+    width: 70%;
+    font-size: 18px;
+    padding-top: 20px;
+    inset: 0;
+    margin: auto;
+    text-align: center;
+}
+
+.video iframe {
+    margin: 10px;
+    padding: 10px;
+}
+
+.Introduccion .seg-parrafo {
+    width: 100%;
+    margin-top: 25px;
+    font-style: italic;
+    font-size: 15px;
+}
+
+/* Media Queries*/
+@media (max-width: 768px) {
+    .intro-video {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .Introduccion p {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .video iframe {
+        width: 100%;
+        height: auto; 
+    }
+
+    .Introduccion .seg-parrafo {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Introduccion p {
+        font-size: 14px;
+    }
+
+    .Introduccion .seg-parrafo {
+        font-size: 12px;
+    }
+}
+
+/*final reseña y video*/
+/*-------------------*/
+/*Seccion nuestros cursos*/
+
+.titulo-curso {
+    padding-top: 3%;
+    padding-bottom: 3%;
+
+}
+
+.titulo h2 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.curso {
+    width: 250px;
+    margin: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(45, 107, 127, 0.6);
+    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.titulo-curso1 {
+    height: 300px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.comprar-curso {
+    padding: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    background: #075f85;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.comprar-curso:hover {
+    color: #02161f;
+    background-color: #6ab2d1;
+}
+
+.Flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.titulo1 {
+    text-align: center;
+    font-size: 25px;
+}
+
+.titulo-curso1 #descripcion {
+    font-size: 13px;
+    color: #ffffffac;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.titulo-curso1 i {
+    padding: 15px 0px;
+    font-size: 25px;
+    width: 100%;
+    color: antiquewhite;
+    text-align: center;
+}
+
+/*final cursos*/
+/*------------*/
+/*seccion opiniones*/
+
+.coment-users {
+    width: 100%;
+    height: 100%;
+}
+
+.titulo-coment #titulo-lo-que-dicen {
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    margin: 40px 0px;
+
+}
+
+.grid {
+    width: 100%;
+    padding: 1rem;
+    margin: auto;
+    min-height: 300px;
+    background: rgb(119, 127, 170);
+    display: grid;
+    grid-template-areas:
+        "texto-desc item1"
+        "texto-desc item2"
+        "texto-desc item3";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.grid .texto-desc {
+    grid-area: texto-desc;
+    text-align: center;
+}
+
+.texto-desc #chico-coder {
+    max-width: 25rem;
+    margin: auto;
+}
+
+.grid .item1 {
+    grid-area: item1;
+    background: linear-gradient(#86cbcb, #c3c3c3, #ac8feb);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+
+}
+
+.grid .item2 {
+    grid-area: item2;
+    background: linear-gradient(#86cbcb, #c3c3c3, #ac8feb);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.grid .item3 {
+    grid-area: item3;
+    background: linear-gradient(#86cbcb, #c3c3c3, #ac8feb);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+
+}
+
+.grid div {
+    border-radius: 5px;
+}
+
+.grid #main-title {
+    padding-left: 10px;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--primary-color-dark);
+    text-align: start;
+}
+
+.grid #desc-emp {
+    text-align: start;
+    font-size: 1.2rem;
+    margin-left: 10px;
+}
+
+.grid #foto1 {
+    max-width: 75px;
+    border-radius: 50%;
+    border: 2px solid #02161f;
+}
+
+.grid h4 {
+    padding-top: 15px;
+    text-align: end;
+    color: #02161f;
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.grid span i {
+    font-size: 4rem;
+    color: #062cb9;
+}
+
+.grid .boton-saber-mas {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 12px;
+    box-sizing: border-box;
+    width: 30%;
+    text-decoration: none;
+    color: #200951;
+    background-color: #ac8feb;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-areas:
+            "texto-desc"
+            "item1"
+            "item2"
+            "item3";
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .grid #main-title {
+        font-size: 2.5rem;
+        
+    }
+
+    .grid #desc-emp {
+        font-size: 1rem;
+       
+    }
+
+    .grid .boton-saber-mas {
+        width: 80%;
+        
+    }
+
+    .grid span i {
+        font-size: 3rem;
+        
+    }
+}
+/*final opiniones*/
+/*---------------*/
+/*seccion "donde encontrarnos"*/
+
+.seccion-mapa {
+    padding: 15px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(186, 186, 186, 0.3);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    gap: 10px;
+}
+
+.seccion-mapa iframe {
+    width: 40%;
+    height: 40vh;
+    border-radius: 50px;
+
+}
+
+.seccion-mapa h3 {
+    font-size: 30px;
+    padding: 10px;
+    margin-right: 30px;
+}
+
+/*final seccion "donde encotrarnos"*/
+/*------------------------------*/
+/*Seccion registrate*/
+.registro h2 {
+    padding-top: 30px;
+    text-align: center;
+    font-size: 45px;
+}
+
+.registro p {
+    font-size: 30px;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.registro form {
+    margin: 10px;
+    padding: 10px;
+    background: rgba(45, 107, 127, 0.6);
+    border: none;
+    border-radius: 15px;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.registro .datos1 {
+    width: 100%;
+    color: white;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.registro .datos label {
+    max-height: 50px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+.registro .datos input {
+    padding: 10px;
+    width: 100%;
+    border: 2px solid rgb(78, 78, 179);
+    border-radius: 15px;
+    background: rgba(139, 139, 139, 0.6);
+
+}
+
+.registro .datos {
+    width: 40%;
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.679);
+}
+
+.registro button {
+    width: 60%;
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    color: rgb(255, 255, 255);
+    background: #075f85;
+    border-radius: 15px;
+}
+
+.registro button:hover {
+    color: rgb(255, 255, 255);
+    background-color: #043144;
+    cursor: pointer;
+    border: 1px solid #589fbe;
+}
+
+.registro textarea {
+    border-radius: 5px;
+    width: 95%;
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.datos #ya-tienes-cuenta {
+    padding-top: 0;
+    padding-bottom: 3px;
+    color: #000000;
+    font-size: 15px;
+}
+
+.datos .ingresa-aqui {
+    text-decoration: none;
+    color: #000000;
+}
+
+.datos .ingresa-aqui:hover {
+    color: #dedede;
+    cursor: pointer;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .registro h2 {
+        font-size: 36px; 
+    }
+
+    .registro p {
+        font-size: 24px; 
+    }
+
+    .registro .datos {
+        width: 80%; 
+    }
+
+    .registro button {
+        width: 80%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .registro h2 {
+        font-size: 28px; 
+    }
+
+    .registro p {
+        font-size: 20px; 
+    }
+
+    .registro .datos label {
+        font-size: 14px; 
+    }
+
+    .registro .datos input,
+    .registro textarea {
+        padding: 8px; 
+    }
+
+    .datos #ya-tienes-cuenta {
+        font-size: 13px; 
+    }
+}
+
+/*final seccion registro*/
+/*--------------------*/
+/*Seccion Footer*/
+
+.footer {
+    background-color: #02161f;
+    padding: 80px 0;
+}
+
+.conteiner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.conteiner2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.links p {
+    color: antiquewhite;
+    border-bottom: 3px solid rgb(88, 27, 145);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    display: inline-block;
+}
+
+.links a {
+    text-decoration: none;
+    list-style: none;
+    color: #dadbc9ac;
+}
+
+.links a li {
+    padding-top: 5px;
+}
+
+.direccion #dir {
+    color: #1bb7ff8b;
+    padding-top: 50px;
+}
+
+.links a li:hover {
+    color: aliceblue;
+}
+
+.direccion i {
+    width: 100%;
+    color: #1bb7ff8b;
+    text-align: center;
+    padding-top: 12px;
+}
+
+/* Media Queries*/
+@media (max-width: 768px) {
+    .conteiner2 {
+        flex-direction: column;
+        align-content: center;
+        gap: 20px; 
+    }
+
+    .links p {
+        font-size: 16px; 
+    }
+
+    .direccion #dir {
+        padding-top: 30px; 
+    }
+
+    .direccion i {
+        padding-top: 8px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .links p {
+        font-size: 14px; 
+    }
+
+    .direccion #dir {
+        padding-top: 20px; 
+    }
+}
+/* Media Queries*/
+/*final footer*/
