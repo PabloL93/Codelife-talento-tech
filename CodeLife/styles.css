@@ -95,27 +95,27 @@ p {
     background: #5c7f2e;
 }
 
-nav ul { 
-    display: flex; 
-    list-style-type: none; 
-} 
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
 
-nav ul li { 
-    margin-right: 20px; 
-} 
+nav ul li {
+    margin-right: 20px;
+}
 
-.cart-icon { 
-    position: relative; 
-} 
+.cart-icon {
+    position: relative;
+}
 
-#cart-count { 
-    position: absolute; 
-    top: -10px; 
-    right: -10px; 
-    background-color: red; 
-    color: white; 
-    border-radius: 50%; 
-    padding: 2px 6px; 
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
     font-size: 12px;
 }
 
@@ -215,7 +215,7 @@ nav ul li {
 
     .video iframe {
         width: 100%;
-        height: auto; 
+        height: auto;
     }
 
     .Introduccion .seg-parrafo {
@@ -250,6 +250,7 @@ nav ul li {
 
 .curso {
     width: 250px;
+    height: 450px;
     margin: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     background-color: rgba(45, 107, 127, 0.6);
@@ -264,7 +265,8 @@ nav ul li {
     border-radius: 5px;
 }
 
-.comprar-curso {
+.comprar-curso,
+.ver-curso {
     padding: 10px;
     width: 100%;
     display: block;
@@ -274,16 +276,18 @@ nav ul li {
     border-radius: 4px;
     color: aliceblue;
     text-decoration: none;
+    margin-top: 10px;
 }
 
-.comprar-curso:hover {
+.comprar-curso:hover,
+.ver-curso:hover {
     color: #02161f;
     background-color: #6ab2d1;
 }
 
 .Flex {
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     align-items: center;
     flex-wrap: wrap;
 }
@@ -293,7 +297,7 @@ nav ul li {
     font-size: 25px;
 }
 
-.titulo-curso1 #descripcion {
+.descripcion {
     font-size: 13px;
     color: #ffffffac;
     text-align: center;
@@ -307,6 +311,182 @@ nav ul li {
     color: antiquewhite;
     text-align: center;
 }
+
+.precio {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#message-container {
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    z-index: 100;
+}
+
+.message {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.message.fade-out {
+    opacity: 0;
+}
+
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slide-down 0.3s ease-out;
+}
+
+@keyframes slide-down {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+#cart-items li button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cart-items li button:hover {
+    background-color: #e53935;
+}
+
+
+/*Modal del carrito*/
+/* Estilos del modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #2f4f67;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: slide-down 0.4s ease-out;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.pagar-boton {
+    padding: 10px;
+    width: 100%;
+    display: block;
+    text-align: center;
+    background: #075f85;
+    box-sizing: border-box;
+    border-radius: 4px;
+    color: aliceblue;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.pagar-boton:hover {
+    color: #02161f;
+    background-color: #6ab2d1;
+}
+
+
+
+/*final modal carrito*/
 
 /*final cursos*/
 /*------------*/
@@ -453,24 +633,25 @@ nav ul li {
 
     .grid #main-title {
         font-size: 2.5rem;
-        
+
     }
 
     .grid #desc-emp {
         font-size: 1rem;
-       
+
     }
 
     .grid .boton-saber-mas {
         width: 80%;
-        
+
     }
 
     .grid span i {
         font-size: 3rem;
-        
+
     }
 }
+
 /*final opiniones*/
 /*---------------*/
 /*seccion "donde encontrarnos"*/
@@ -606,42 +787,42 @@ input::placeholder {
 /* Media Queries */
 @media (max-width: 768px) {
     .registro h2 {
-        font-size: 36px; 
+        font-size: 36px;
     }
 
     .registro p {
-        font-size: 24px; 
+        font-size: 24px;
     }
 
     .registro .datos {
-        width: 80%; 
+        width: 80%;
     }
 
     .registro button {
-        width: 80%; 
+        width: 80%;
     }
 }
 
 @media (max-width: 480px) {
     .registro h2 {
-        font-size: 28px; 
+        font-size: 28px;
     }
 
     .registro p {
-        font-size: 20px; 
+        font-size: 20px;
     }
 
     .registro .datos label {
-        font-size: 14px; 
+        font-size: 14px;
     }
 
     .registro .datos input,
     .registro textarea {
-        padding: 8px; 
+        padding: 8px;
     }
 
     .datos #ya-tienes-cuenta {
-        font-size: 13px; 
+        font-size: 13px;
     }
 }
 
@@ -704,30 +885,31 @@ input::placeholder {
     .conteiner2 {
         flex-direction: column;
         align-content: center;
-        gap: 20px; 
+        gap: 20px;
     }
 
     .links p {
-        font-size: 16px; 
+        font-size: 16px;
     }
 
     .direccion #dir {
-        padding-top: 30px; 
+        padding-top: 30px;
     }
 
     .direccion i {
-        padding-top: 8px; 
+        padding-top: 8px;
     }
 }
 
 @media (max-width: 480px) {
     .links p {
-        font-size: 14px; 
+        font-size: 14px;
     }
 
     .direccion #dir {
-        padding-top: 20px; 
+        padding-top: 20px;
     }
 }
+
 /* Media Queries*/
 /*final footer*/
