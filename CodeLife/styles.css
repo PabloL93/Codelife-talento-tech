@@ -95,6 +95,30 @@ p {
     background: #5c7f2e;
 }
 
+nav ul { 
+    display: flex; 
+    list-style-type: none; 
+} 
+
+nav ul li { 
+    margin-right: 20px; 
+} 
+
+.cart-icon { 
+    position: relative; 
+} 
+
+#cart-count { 
+    position: absolute; 
+    top: -10px; 
+    right: -10px; 
+    background-color: red; 
+    color: white; 
+    border-radius: 50%; 
+    padding: 2px 6px; 
+    font-size: 12px;
+}
+
 /* final HEADER*/
 /*--------------*/
 /*seccion Bienvenida*/
