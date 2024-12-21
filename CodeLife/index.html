@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="icon" href="imagen/icono.ico"><!--icono pestaña-->
-    
+
     <title>CodeLife</title>
 </head>
 
@@ -31,12 +31,23 @@
                 <li><a href="#">Cursos</a></li>
                 <li><a href="#">Contacto</a></li>
                 <li><a href="#">Sumate</a></li>
-                <li> <a href="#" class="cart-icon"> 🛒 <span id="cart-count">0</span> </a>
+                <li> <a href="#" class="cart-icon">
+                    <i class="fa-solid fa-cart-shopping"></i><span id="cart-count">0</span> </a>
             </ul>
+            <!-- Modal del carrito -->
+            <div id="cart-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Tu carrito:</h2>
+                    <ul id="cart-items"></ul>
+                    <a class="pagar-boton" href="#">ir a pagar</a>
+                </div>
+            </div>
+
             <!--final Seccion Menu-->
         </nav>
         <a href="#" class="boton-Ingresar"><button>Ingresar</button></a>
-        
+
     </header>
     <!--final de parte principal-->
     <!--Comenienzo seccion intro-->
@@ -76,153 +87,181 @@
         <section class="titulo-curso">
             <div class="titulo">
                 <h2>Nuestros cursos</h2>
+            </div>
         </section>
-        </div>
-        <section class="Flex">
-            <div class="curso">
-                <div class="titulo-curso1">
-                    <p class="titulo1">Front-End</p>
-                    <i class="fa-solid fa-laptop-file"></i>
-                    <p id="descripcion">
-                        En esta carrera de Front End aprenderás a crear un sitio web, y
-                        te sumergirás en las mejores prácticas del diseño web,
-                        trabajando con HTML y CSS. Además, sabrás cómo programar
-                        con Javascript y React Js.
-                    </p>
+        <div>
+            <section class="Flex">
+                <div class="curso">
+                    <div class="titulo-curso1">
+                        <p class="titulo1">Front-End</p>
+                        <i class="fa-solid fa-laptop-file"></i>
+                        <p class="descripcion">
+                            En esta carrera de Front End aprenderás a crear un sitio web, y
+                            te sumergirás en las mejores prácticas del diseño web,
+                            trabajando con HTML y CSS. Además, sabrás cómo programar
+                            con Javascript y React Js.
+                        </p>
+                        <p class="precio">Precio: $20,000 ARS</p>
+                        <a class="comprar-curso" href="#">comprar curso</a>
+                        <a class="ver-curso" href="front-end.html">ver curso</a>
+                    </div>
+                    <div id="message-container"></div>
                 </div>
-                <a class="comprar-curso" href="">comprar curso</a>
-            </div>
-            <div class="curso">
-                <div class="titulo-curso1">
-                    <p class="titulo1">Back-End</p>
-                    <i class="fa-solid fa-database"></i>
-                    <p id="descripcion">
-                        Aprenderás a trabajar con Bases de datos NoSQL
-                        dominando la gestión de los datos en forma eficiente,
-                        ágil y con una gran facilidad de escalabilidad.
-                    </p>
+                <div class="curso">
+                    <div class="titulo-curso1">
+                        <p class="titulo1">Back-End</p>
+                        <i class="fa-solid fa-database"></i>
+                        <p class="descripcion">
+                            Aprenderás a trabajar con Bases de datos NoSQL
+                            dominando la gestión de los datos en forma eficiente,
+                            ágil y con una gran facilidad de escalabilidad.
+                        </p>
+                        <p class="precio">Precio: $25,000 ARS</p>
+                        <a class="comprar-curso" href="#">comprar curso</a>
+                        <a class="ver-curso" href="back-end.html">ver curso</a>
+                    </div>
+                    <div id="message-container"></div>
                 </div>
-                <a class="comprar-curso" href="">comprar curso</a>
-            </div>
-            <div class="curso">
-                <div class="titulo-curso1">
-                    <p class="titulo1">Data Analyst</p>
-                    <i class="fa-solid fa-square-poll-vertical"></i>
-                    <p id="descripcion">
-                        Aprende a analizar grandes volúmenes de
-                        datos y transfórmalos en información valiosa
-                        para el negocio.
-                    </p>
+                <div class="curso">
+                    <div class="titulo-curso1">
+                        <p class="titulo1">Data Analyst</p>
+                        <i class="fa-solid fa-square-poll-vertical"></i>
+                        <p class="descripcion">
+                            Aprende a analizar grandes volúmenes de
+                            datos y transfórmalos en información valiosa
+                            para el negocio.
+                        </p>
+                        <p class="precio">Precio: $30,000 ARS</p>
+                        <a class="comprar-curso" href="#">comprar curso</a>
+                        <a class="ver-curso" href="data-analyst.html">ver curso</a>
+                    </div>
+                    <div id="message-container"></div>
                 </div>
-                <a class="comprar-curso" href="">comprar curso</a>
-            </div>
-            <div class="curso">
-                <div class="titulo-curso1">
-                    <p class="titulo1">C++</p>
-                    <i class="fa-solid fa-code"></i>
-                    <p id="descripcion">
-                        Aprenderas los conceptos fundamentales del
-                        paradigma programación orientada a objetos (POO)
-                        y poner en práctica los conceptos de POO usando el
-                        potente lenguaje C++ para escribir una aplicación.
-                    </p>
+                <div class="curso">
+                    <div class="titulo-curso1">
+                        <p class="titulo1">C++</p>
+                        <i class="fa-solid fa-code"></i>
+                        <p class="descripcion">
+                            Aprenderas los conceptos fundamentales del
+                            paradigma programación orientada a objetos (POO)
+                            y poner en práctica los conceptos de POO usando el
+                            potente lenguaje C++ para escribir una aplicación.
+                        </p>
+                        <p class="precio">Precio: $35,000 ARS</p>
+                        <a class="comprar-curso" href="#">comprar curso</a>
+                        <a class="ver-curso" href="c++.html">ver curso</a>
+                    </div>
+                    <div id="message-container"></div>
                 </div>
-                <a class="comprar-curso" href="">comprar curso</a>
-            </div>
+            </section>
 
-        </section>
-        <!--Final Seccion de Cursos-->
-        <!--Seccion "comentarios de usuarios"-->
-        <section class="coment-users">
-            <div class="titulo-coment">
-                <h2 id="titulo-lo-que-dicen">Lo que nuestros alumnos dicen...
-                </h2>
-            </div>
-        </section>
-        <section class="grid">
-            <div class="texto-desc">
-                <p id="main-title">Muchos de nuestos egresados ya trabajan en grandes empresas</p>
-                <p id="desc-emp">Contamos con el respaldo de inversores y organizaciones globales
-                    que apoyan nuestra visión de potenciar el talento digital en la región.<br>
-                    <a class="boton-saber-mas" href="#">Saber Mas</a>
-                </p>
-                <img id="chico-coder" src="./imagen/Image004.png" alt="chico-coder">
-            </div>
-            <div class="item1">
-                <img id="foto1" src="./imagen/Fritz-Schlueter.png" alt="foto1">
-                <span><i class="ri-double-quotes-l"></i></span>
-                <div class="card-info">
-                    <p>Gracias Codelife por impartir estos 
-                        cursos de excelencia que nos nutren de 
-                        conocimientos y colaboran con nuestro desarrollo 
-                        profesional para la mejora continua.
-                    </p>
-                    <h4>Marcos - Full Stack Dev.</h4>
+            <!-- Modal del carrito -->
+            <div id="cart-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Carrito de Compras</h2>
+                    <ul id="cart-items"></ul>
                 </div>
             </div>
-            <div class="item2">
-                <img id="foto1" src="./imagen/chica3.webp" alt="foto2">
-                <span><i class="ri-double-quotes-l"></i></span>
-                <div class="card-info">
-                    <p>Aprendí, con mucho esfuerzo y dedicación, 
-                        técnicas valiosísimas para la explotación, 
-                        análisis y uso de los datos, logrando obtener 
-                        las herramientas necesarias para transformar 
-                        esos datos en información valiosa para la toma 
-                        de decisiones dentro de la empresa.
-                    </p>
-                    <h4>Pilar - Data Analyst</h4>
-                </div>
-            </div>
-            <div class="item3">
-                <img id="foto1" src="./imagen/johanna-bauer.jpg" alt="foto3">
-                <span><i class="ri-double-quotes-l"></i></span>
-                <div class="card-info">
-                    <p>Codelife no solo me brindó conocimientos 
-                        técnicos sólidos, sino también la confianza 
-                        y la mentalidad para abrazar este nuevo desafío. 
-                        De recursos humanos a desarrollador de software.
-                    </p>
-                    <h4>Silvina - Programadora C++</h4>
-                </div>
-            </div>
-        </section>
-        <!--final seccion comentarios de usuarios-->
-        <!--mapa-->
-        <section class="seccion-mapa">
-            <div class="titulo-mapa">
-                <h3>Encontranos en nuestros oficinas</h3>
-            </div>
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.3290111802353!2d-58.382320924372486!3d-34.595840972957134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccab63657b529%3A0xbfe8d20a0c6960d3!2sSuipacha%201047%2C%20C1008%20AAU%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1729774585676!5m2!1ses!2sar"
-                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </section>
-        <!--fin mapa-->
-        <!--Seccion Registro-->
-        <section class="registro">
-            <div class=titulo-registro>
-                <h2>Sumate a la experiencia CodeLife</h2>
-                <p>Dejanos tus datos</p>
-                <div class="datos1">
-                    <form class="datos" action="https://formspree.io/f/xbljglpl"
-                    method="POST">
-                        <label for="nombre">Nombre y apellido <input type="text" name="name" placeholder="Nombre"
-                                required></label><br>
-                        <label for="fechas">Fecha de nacimiento <input type="date" name="date" required></label><br>
-                        <label for="mail">E-mail <input type="email" name="email" placeholder="Tu e-mail" required></label><br>
-                        <label for="password">password <input type="password" size="10" maxlength="10" name="password" placeholder="hasta 10 caracteres" pattern=" [A-Za-z0-9]+" required></label><br>
-                        <label for="comenta">Dejanos tu consulta aqui:</label>
-                        <textarea placeholder="Escribe tus dudas aqui..." name="textarea" rows="9" cols="8"></textarea>
-                        <a href="#"><button>Registrarse</button></a>
-                        <p id="ya-tienes-cuenta">¿Ya tenes una cuenta? <a href="#" class="ingresa-aqui">Ingresa aqui</a></p>
+            <div id="message-container"></div>
 
-                    </form>
-
+            <!--Final Seccion de Cursos-->
+            <!--Seccion "comentarios de usuarios"-->
+            <section class="coment-users">
+                <div class="titulo-coment">
+                    <h2 id="titulo-lo-que-dicen">Lo que nuestros alumnos dicen...
+                    </h2>
                 </div>
-            </div>
-        </section>
-        <!--Final Registro-->
+            </section>
+            <section class="grid">
+                <div class="texto-desc">
+                    <p id="main-title">Muchos de nuestos egresados ya trabajan en grandes empresas</p>
+                    <p id="desc-emp">Contamos con el respaldo de inversores y organizaciones globales
+                        que apoyan nuestra visión de potenciar el talento digital en la región.<br>
+                        <a class="boton-saber-mas" href="#">Saber Mas</a>
+                    </p>
+                    <img id="chico-coder" src="./imagen/Image004.png" alt="chico-coder">
+                </div>
+                <div class="item1">
+                    <img id="foto1" src="./imagen/Fritz-Schlueter.png" alt="foto1">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="card-info">
+                        <p>Gracias Codelife por impartir estos
+                            cursos de excelencia que nos nutren de
+                            conocimientos y colaboran con nuestro desarrollo
+                            profesional para la mejora continua.
+                        </p>
+                        <h4>Marcos - Full Stack Dev.</h4>
+                    </div>
+                </div>
+                <div class="item2">
+                    <img id="foto1" src="./imagen/chica3.webp" alt="foto2">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="card-info">
+                        <p>Aprendí, con mucho esfuerzo y dedicación,
+                            técnicas valiosísimas para la explotación,
+                            análisis y uso de los datos, logrando obtener
+                            las herramientas necesarias para transformar
+                            esos datos en información valiosa para la toma
+                            de decisiones dentro de la empresa.
+                        </p>
+                        <h4>Pilar - Data Analyst</h4>
+                    </div>
+                </div>
+                <div class="item3">
+                    <img id="foto1" src="./imagen/johanna-bauer.jpg" alt="foto3">
+                    <span><i class="ri-double-quotes-l"></i></span>
+                    <div class="card-info">
+                        <p>Codelife no solo me brindó conocimientos
+                            técnicos sólidos, sino también la confianza
+                            y la mentalidad para abrazar este nuevo desafío.
+                            De recursos humanos a desarrollador de software.
+                        </p>
+                        <h4>Silvina - Programadora C++</h4>
+                    </div>
+                </div>
+            </section>
+            <!--final seccion comentarios de usuarios-->
+            <!--mapa-->
+            <section class="seccion-mapa">
+                <div class="titulo-mapa">
+                    <h3>Encontranos en nuestros oficinas</h3>
+                </div>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.3290111802353!2d-58.382320924372486!3d-34.595840972957134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccab63657b529%3A0xbfe8d20a0c6960d3!2sSuipacha%201047%2C%20C1008%20AAU%2C%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1729774585676!5m2!1ses!2sar"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </section>
+            <!--fin mapa-->
+            <!--Seccion Registro-->
+            <section class="registro">
+                <div class=titulo-registro>
+                    <h2>Sumate a la experiencia CodeLife</h2>
+                    <p>Dejanos tus datos</p>
+                    <div class="datos1">
+                        <form class="datos" action="https://formspree.io/f/xbljglpl" method="POST">
+                            <label for="nombre">Nombre y apellido <input type="text" name="name" placeholder="Nombre"
+                                    required></label><br>
+                            <label for="fechas">Fecha de nacimiento <input type="date" name="date" required></label><br>
+                            <label for="mail">E-mail <input type="email" name="email" placeholder="Tu e-mail"
+                                    required></label><br>
+                            <label for="password">password <input type="password" size="10" maxlength="10"
+                                    name="password" placeholder="hasta 10 caracteres" pattern=" [A-Za-z0-9]+"
+                                    required></label><br>
+                            <label for="comenta">Dejanos tu consulta aqui:</label>
+                            <textarea placeholder="Escribe tus dudas aqui..." name="textarea" rows="9"
+                                cols="8"></textarea>
+                            <a href="#"><button>Registrarse</button></a>
+                            <p id="ya-tienes-cuenta">¿Ya tenes una cuenta? <a href="#" class="ingresa-aqui">Ingresa
+                                    aqui</a>
+                            </p>
+
+                        </form>
+
+                    </div>
+                </div>
+            </section>
+            <!--Final Registro-->
     </main>
     <!--Seccion Footer-->
     <footer class="footer">
@@ -270,7 +309,7 @@
         </div>
     </footer>
     <!--Final Footer-->
-    <script src="interactivity_script.js"></script> 
+    <script src="interactivity_script.js"></script>
 </body>
 
 </html>
