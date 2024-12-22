@@ -31,23 +31,32 @@
                 <li><a href="#">Cursos</a></li>
                 <li><a href="#">Contacto</a></li>
                 <li><a href="#">Sumate</a></li>
-                <li> <a href="#" class="cart-icon">
-                    <i class="fa-solid fa-cart-shopping"></i><span id="cart-count">0</span> </a>
-            </ul>
-            <!-- Modal del carrito -->
-            <div id="cart-modal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Tu carrito:</h2>
-                    <ul id="cart-items"></ul>
-                    <a class="pagar-boton" href="#">ir a pagar</a>
-                </div>
-            </div>
+                <li class=" submenu">
+                    <a href="#" class="cart-icon"> <i class="fa-solid fa-cart-shopping"></i><span id="cart-count">0</span> </a>
+                    <div id="cart-modal" class="modal">
+                        <table id="cart-items">
+                            <h2>Tu carrito:</h2>
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
 
-            <!--final Seccion Menu-->
+                        <p id="total-price">Total a pagar: $0 ARS</p>
+                        <a class="pagar-boton" href="#">ir a pagar</a>
+                        <a class="vaciar-carrito" href="#">vaciar carrito</a>
+                    </div>
+                </li>
+            </ul>
+
         </nav>
         <a href="#" class="boton-Ingresar"><button>Ingresar</button></a>
-
+        <!--final Seccion Menu-->
     </header>
     <!--final de parte principal-->
     <!--Comenienzo seccion intro-->
@@ -90,9 +99,9 @@
             </div>
         </section>
         <div>
-            <section class="Flex">
+            <section class="Flex" id="li_cursos">
                 <div class="curso">
-                    <div class="titulo-curso1">
+                    <div class="titulo-curso1" data-id="1">
                         <p class="titulo1">Front-End</p>
                         <i class="fa-solid fa-laptop-file"></i>
                         <p class="descripcion">
@@ -108,7 +117,7 @@
                     <div id="message-container"></div>
                 </div>
                 <div class="curso">
-                    <div class="titulo-curso1">
+                    <div class="titulo-curso1" data-id="2">
                         <p class="titulo1">Back-End</p>
                         <i class="fa-solid fa-database"></i>
                         <p class="descripcion">
@@ -123,7 +132,7 @@
                     <div id="message-container"></div>
                 </div>
                 <div class="curso">
-                    <div class="titulo-curso1">
+                    <div class="titulo-curso1" data-id="3">
                         <p class="titulo1">Data Analyst</p>
                         <i class="fa-solid fa-square-poll-vertical"></i>
                         <p class="descripcion">
@@ -138,7 +147,7 @@
                     <div id="message-container"></div>
                 </div>
                 <div class="curso">
-                    <div class="titulo-curso1">
+                    <div class="titulo-curso1" data-id="4">
                         <p class="titulo1">C++</p>
                         <i class="fa-solid fa-code"></i>
                         <p class="descripcion">
@@ -154,16 +163,6 @@
                     <div id="message-container"></div>
                 </div>
             </section>
-
-            <!-- Modal del carrito -->
-            <div id="cart-modal" class="modal">
-                <div class="modal-content">
-                    <span class="close">&times;</span>
-                    <h2>Carrito de Compras</h2>
-                    <ul id="cart-items"></ul>
-                </div>
-            </div>
-            <div id="message-container"></div>
 
             <!--Final Seccion de Cursos-->
             <!--Seccion "comentarios de usuarios"-->
@@ -309,7 +308,7 @@
         </div>
     </footer>
     <!--Final Footer-->
-    <script src="interactivity_script.js"></script>
+    <script src="cartService.js"></script>
 </body>
 
 </html>
