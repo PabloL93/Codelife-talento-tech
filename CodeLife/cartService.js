@@ -10,6 +10,10 @@ cargarEventListeners();
 function cargarEventListeners() {
     listaCursos.addEventListener("click", comprarCurso);
 
+    btnSumarAlcarrito.addEventListener('click', () => {
+        
+    });
+
     //Eliminar cursos del carrito
     carrito.addEventListener('click', eliminarCurso);
 
