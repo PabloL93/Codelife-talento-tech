@@ -5,6 +5,8 @@ const listaCarrito = document.querySelector('#cart-items tbody');
 const vaciarCarritoBtn = document.querySelector('#vaciarCarrito');
 const btnSumarAlcarrito = document.querySelector('#cart-count');
 let articuloCarrito = [];
+let cartItems = [];
+
 
 cargarEventListeners();
 function cargarEventListeners() {
