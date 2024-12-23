@@ -2,12 +2,32 @@
 const carrito = document.querySelector('#cart-modal');
 const listaCursos = document.querySelector("#li_cursos");
 const listaCarrito = document.querySelector('#cart-items tbody');
-const vaciarCarritoBtn = document.querySelector('.vaciar-carrito');
+const vaciarCarritoBtn = document.querySelector('#vaciarCarrito');
+const btnSumarAlcarrito = document.querySelector('#cart-count');
 let articuloCarrito = [];
 
 cargarEventListeners();
 function cargarEventListeners() {
     listaCursos.addEventListener("click", comprarCurso);
+
+    //Eliminar cursos del carrito
+    carrito.addEventListener('click', eliminarCurso);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        articuloCarrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+        carritoHTML();
+    });
+
+    //Vaciar el carrito
+    vaciarCarritoBtn.addEventListener("click", () => { 
+        
+        articuloCarrito = [];
+
+        limpiarHTML();
+        sincronizarStorage();
+
+    });
 }
 
 //Funciones//
@@ -16,6 +36,29 @@ function comprarCurso(e) {
     if (e.target.classList.contains("comprar-curso")) {
         cursoSeleccionado = e.target.parentElement.parentElement;
         leerDatosCurso(cursoSeleccionado);
+    }
+}
+
+function eliminarCurso(e) {
+    if (e.target.classList.contains('borrar-curso')) {
+        const cursoId = e.target.getAttribute('data-id');
+        const existe = articuloCarrito.some(curso => (curso.id === cursoId && curso.cantidad > 1));
+
+        if (existe) {
+            //Actualizamos la cantidad
+            const curso = articuloCarrito.map(curso => {
+                if (curso.id === cursoId) {
+                    curso.cantidad--;
+
+                    return curso;
+                }
+            });
+            articuloCarrito = [...curso]
+        } else {
+            articuloCarrito = articuloCarrito.filter(curso => curso.id !== cursoId);
+        }
+
+        carritoHTML();
     }
 }
 
@@ -34,8 +77,8 @@ function leerDatosCurso(curso) {
         //Actualizamos la cantidad
         const cursos = articuloCarrito.map(curso => {
             if (curso.id === infoCurso.id) {
-               curso.cantidad++;
-               return curso;
+                curso.cantidad++;
+                return curso;
             } else {
                 return curso;
             }
@@ -72,8 +115,8 @@ function carritoHTML() {
             <td>
 
               ${cantidad}
-
-            </td>
+            
+            <td>
             <td>
               <a href="#" class="borrar-curso" data-id="${id}">X</a>
             </td>
@@ -83,6 +126,14 @@ function carritoHTML() {
         listaCarrito.appendChild(row);
 
     })
+
+    //Agregar el carrito de compras al storage
+    sincronizarStorage();
+
+}
+
+function sincronizarStorage() {
+    localStorage.setItem('carrito', JSON.stringify(articuloCarrito));
 }
 
 //Limpiar el HTML //
