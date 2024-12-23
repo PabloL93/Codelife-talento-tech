@@ -108,7 +108,7 @@ nav ul li {
     position: relative;
 }
 
-#cart-count {
+#add-to-cart {
     position: absolute;
     top: -10px;
     right: -10px;
@@ -846,4 +846,4 @@ input::placeholder {
 }
 
 /* Media Queries*/
-/*final footer*/
+/*final footer*/                      
