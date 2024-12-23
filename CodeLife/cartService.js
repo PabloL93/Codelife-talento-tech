@@ -9,10 +9,7 @@ let articuloCarrito = [];
 cargarEventListeners();
 function cargarEventListeners() {
     listaCursos.addEventListener("click", comprarCurso);
-
-    btnSumarAlcarrito.addEventListener('click', () => {
-        
-    });
+      
 
     //Eliminar cursos del carrito
     carrito.addEventListener('click', eliminarCurso);
@@ -35,6 +32,7 @@ function cargarEventListeners() {
 }
 
 //Funciones//
+
 function comprarCurso(e) {
     e.preventDefault();
     if (e.target.classList.contains("comprar-curso")) {
