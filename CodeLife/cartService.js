@@ -4,12 +4,12 @@ const listaCursos = document.querySelector("#li_cursos");
 const listaCarrito = document.querySelector('#cart-items tbody');
 const vaciarCarritoBtn = document.querySelector('#vaciarCarrito');
 const iconoCarrito = document.querySelector('#add-to-cart');
+const totalPriceElement = document.querySelector('#total-price');
 let articuloCarrito = [];
 
 cargarEventListeners();
 function cargarEventListeners() {
     listaCursos.addEventListener("click", comprarCurso);
-
 
     //Eliminar cursos del carrito
     carrito.addEventListener('click', eliminarCurso);
@@ -71,7 +71,7 @@ function leerDatosCurso(curso) {
     //Crear un objeto con el contenido del curso actual
     infoCurso = {
         titulo: curso.querySelector('.titulo1').textContent,
-        precio: curso.querySelector('.precio').textContent,
+        precio: parseFloat(curso.querySelector('.precio').textContent.replace('$', '').replace(' ARS', '')),
         id: curso.querySelector('a').getAttribute('data-id'),
         cantidad: 1
     }
@@ -107,25 +107,12 @@ function carritoHTML() {
         const row = document.createElement('tr');
 
         row.innerHTML = `
+            <td>${titulo}</td>
+            <td>${precio}</td>
+            <td>${cantidad}</td>
             <td>
-
-              ${titulo}
-
+                <a href="#" class="borrar-curso" data-id="${id}">X</a>
             </td>
-            <td>
-
-              ${precio}
-
-            </td>
-            <td>
-
-              ${cantidad}
-            
-            </td>        
-            <td>
-              <a href="#" class="borrar-curso" data-id="${id}">X</a>
-            </td>
-
         `;
 
         listaCarrito.appendChild(row);
@@ -134,7 +121,7 @@ function carritoHTML() {
 
     //Agregar el carrito de compras al storage
     sincronizarStorage();
-
+    actualizarTotalPrice();
 }
 
 function sincronizarStorage() {
@@ -153,4 +140,10 @@ function limpiarHTML() {
 function actualizarIconoCarrito() {
     const cantidadTotal = articuloCarrito.reduce((total, curso) => total + curso.cantidad, 0);
     iconoCarrito.textContent = cantidadTotal;
+}
+
+//Actualizar el precio total
+function actualizarTotalPrice() {
+    const totalPrice = articuloCarrito.reduce((total, curso) => total + (curso.precio * curso.cantidad), 0);
+    totalPriceElement.textContent = `Total a pagar: $${totalPrice.toFixed(2)} ARS`;
 }
