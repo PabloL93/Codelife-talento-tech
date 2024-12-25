@@ -32,7 +32,8 @@
                 <li><a href="#">Contacto</a></li>
                 <li><a href="#">Sumate</a></li>
                 <li class=" submenu">
-                    <a href="#" class="cart-icon"> <i class="fa-solid fa-cart-shopping"></i><span id="add-to-cart">0</span> </a>
+                    <a href="#" class="cart-icon"> <i class="fa-solid fa-cart-shopping"></i><span
+                            id="add-to-cart">0</span> </a>
                     <div id="cart-modal" class="modal">
                         <table id="cart-items">
                             <h2>Tu carrito:</h2>
@@ -53,7 +54,7 @@
                     </div>
                 </li>
             </ul>
-                                                
+
         </nav>
         <a href="#" class="boton-Ingresar"><button>Ingresar</button></a>
         <!--final Seccion Menu-->
@@ -71,27 +72,31 @@
 
         <section class="intro-video">
             <div class="Introduccion">
-                <p>
-                    ¡Bienvenido a nuestra plataforma de cursos de programación!
-                    Aquí, no solo aprenderás los fundamentos, sino que también
-                    adquirirás habilidades avanzadas para destacar en el mundo
-                    de la tecnología. Únete a nuestra comunidad de apasionados
-                    por la programación y da el primer paso hacia tu futuro
-                    profesional.
-                </p>
-                <p class="seg-parrafo">Uno de nuestos egresados te cuenta sobre sus primeros pasos > </p>
-            </div>
-            <!--final intro-->
-            <!--Video-->
-            <div class="video">
-                <iframe track="ExperienciaProgramando" width="560" height="315"
-                    src="https://www.youtube.com/embed/VNAranCWwuU?si=Xdut5-4am7OKpaTU" title="YouTube video player"
-                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-            gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen></iframe>
+                <div id="parrafos">
+                    <p>
+                        ¡Bienvenido a nuestra plataforma de cursos de programación!
+                        Aquí, no solo aprenderás los fundamentos, sino que también
+                        adquirirás habilidades avanzadas para destacar en el mundo
+                        de la tecnología. Únete a nuestra comunidad de apasionados
+                        por la programación y da el primer paso hacia tu futuro
+                        profesional.
+                    </p>
+                    <p class="seg-parrafo">Uno de nuestos egresados te cuenta sobre sus primeros pasos > </p>
+                </div>
+                <!--Video-->
+                <div class="video">
+                    <iframe track="ExperienciaProgramando" width="560" height="315"
+                        src="https://www.youtube.com/embed/VNAranCWwuU?si=Xdut5-4am7OKpaTU" title="YouTube video player"
+                        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+             gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
+                </div>
             </div>
         </section>
         <!--final video-->
+
+        <!--final intro-->
+
         <!--seccion cursos-->
         <section class="titulo-curso">
             <div class="titulo">
@@ -101,7 +106,7 @@
         <div>
             <section class="Flex" id="li_cursos">
                 <div class="curso">
-                    <div class="titulo-curso1" >
+                    <div class="titulo-curso1">
                         <p class="titulo1">Front-End</p>
                         <i class="fa-solid fa-laptop-file"></i>
                         <p class="descripcion">
@@ -110,14 +115,14 @@
                             trabajando con HTML y CSS. Además, sabrás cómo programar
                             con Javascript y React Js.
                         </p>
-                        <p class="precio">Precio: $20,000 ARS</p>
+                        <p id="precio">Precio: $<span class="precio">25000 ARS</span></p>
                         <a data-id="1" class="comprar-curso" href="#">comprar curso</a>
                         <a class="ver-curso" href="front-end.html">ver curso</a>
                     </div>
                     <div id="message-container"></div>
                 </div>
                 <div class="curso">
-                    <div class="titulo-curso1" >
+                    <div class="titulo-curso1">
                         <p class="titulo1">Back-End</p>
                         <i class="fa-solid fa-database"></i>
                         <p class="descripcion">
@@ -125,14 +130,14 @@
                             dominando la gestión de los datos en forma eficiente,
                             ágil y con una gran facilidad de escalabilidad.
                         </p>
-                        <p class="precio">Precio: $25,000 ARS</p>
+                        <p id="precio">Precio: $<span class="precio">35000 ARS</span></p>
                         <a data-id="2" class="comprar-curso" href="#">comprar curso</a>
                         <a class="ver-curso" href="back-end.html">ver curso</a>
                     </div>
                     <div id="message-container"></div>
                 </div>
                 <div class="curso">
-                    <div class="titulo-curso1" >
+                    <div class="titulo-curso1">
                         <p class="titulo1">Data Analyst</p>
                         <i class="fa-solid fa-square-poll-vertical"></i>
                         <p class="descripcion">
@@ -140,14 +145,14 @@
                             datos y transfórmalos en información valiosa
                             para el negocio.
                         </p>
-                        <p class="precio">Precio: $30,000 ARS</p>
+                        <p id="precio">Precio: $<span class="precio">50000</span> ARS</p>
                         <a data-id="3" class="comprar-curso" href="#">comprar curso</a>
                         <a class="ver-curso" href="data-analyst.html">ver curso</a>
                     </div>
                     <div id="message-container"></div>
                 </div>
                 <div class="curso">
-                    <div class="titulo-curso1" >
+                    <div class="titulo-curso1">
                         <p class="titulo1">C++</p>
                         <i class="fa-solid fa-code"></i>
                         <p class="descripcion">
@@ -156,7 +161,7 @@
                             y poner en práctica los conceptos de POO usando el
                             potente lenguaje C++ para escribir una aplicación.
                         </p>
-                        <p class="precio">Precio: $35,000 ARS</p>
+                        <p id="precio">Precio: $<span class="precio">28000 ARS</span></p>
                         <a data-id="4" class="comprar-curso" href="#">comprar curso</a>
                         <a class="ver-curso" href="c++.html">ver curso</a>
                     </div>
@@ -244,8 +249,8 @@
                             <label for="fechas">Fecha de nacimiento <input type="date" name="date" required></label><br>
                             <label for="mail">E-mail <input type="email" name="email" placeholder="Tu e-mail"
                                     required></label><br>
-                            <label for="password">password <input type="password" size="10" maxlength="10"
-                                    name="password" placeholder="hasta 10 caracteres" pattern=" [A-Za-z0-9]+"
+                            <label for="password">password <input type="password" size="8" maxlength="10"
+                                    name="password" placeholder="hasta 10 caracteres"
                                     required></label><br>
                             <label for="comenta">Dejanos tu consulta aqui:</label>
                             <textarea placeholder="Escribe tus dudas aqui..." name="textarea" rows="9"
