@@ -10,6 +10,7 @@
 600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=rocket" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
@@ -54,7 +55,17 @@
                     </div>
                 </li>
             </ul>
-
+            <div class="menu-icon" id="menu-icon">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="mobile-menu" id="mobile-menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Cursos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Sumate</a></li>
+                </ul>
+            </div>
         </nav>
         <a href="#" class="boton-Ingresar"><button>Ingresar</button></a>
         <!--final Seccion Menu-->
@@ -106,66 +117,72 @@
         <div>
             <section class="Flex" id="li_cursos">
                 <div class="curso">
-                    <div class="titulo-curso1">
-                        <p class="titulo1">Front-End</p>
-                        <i class="fa-solid fa-laptop-file"></i>
-                        <p class="descripcion">
-                            En esta carrera de Front End aprenderás a crear un sitio web, y
-                            te sumergirás en las mejores prácticas del diseño web,
-                            trabajando con HTML y CSS. Además, sabrás cómo programar
-                            con Javascript y React Js.
-                        </p>
+                    <div id="titulo1">
+                        <div class="titulo-curso1">
+                            <p class="titulo1">Front-End</p>
+                            <i class="fa-solid fa-laptop-file"></i>
+                            <p class="descripcion">
+                                En esta carrera de Front End aprenderás a crear un sitio web, y
+                                te sumergirás en las mejores prácticas del diseño web,
+                                trabajando con HTML y CSS. Además, sabrás cómo programar
+                                con Javascript y React Js.
+                            </p>
+                        </div>
                         <p id="precio">Precio: $<span class="precio">25000 ARS</span></p>
                         <a data-id="1" class="comprar-curso" href="#">comprar curso</a>
                         <a class="ver-curso" href="front-end.html">ver curso</a>
                     </div>
-                    <div id="message-container"></div>
                 </div>
                 <div class="curso">
-                    <div class="titulo-curso1">
-                        <p class="titulo1">Back-End</p>
-                        <i class="fa-solid fa-database"></i>
-                        <p class="descripcion">
-                            Aprenderás a trabajar con Bases de datos NoSQL
-                            dominando la gestión de los datos en forma eficiente,
-                            ágil y con una gran facilidad de escalabilidad.
-                        </p>
+                    <div id="titulo1">
+                        <div class="titulo-curso1">
+                            <p class="titulo1">Back-End</p>
+                            <i class="fa-solid fa-database"></i>
+                            <p class="descripcion">
+                                Aprenderás a trabajar con Bases de datos NoSQL
+                                dominando la gestión de los datos en forma eficiente,
+                                ágil y con una gran facilidad de escalabilidad.
+                            </p>
+
+                        </div>
                         <p id="precio">Precio: $<span class="precio">35000 ARS</span></p>
                         <a data-id="2" class="comprar-curso" href="#">comprar curso</a>
                         <a class="ver-curso" href="back-end.html">ver curso</a>
                     </div>
-                    <div id="message-container"></div>
                 </div>
                 <div class="curso">
-                    <div class="titulo-curso1">
-                        <p class="titulo1">Data Analyst</p>
-                        <i class="fa-solid fa-square-poll-vertical"></i>
-                        <p class="descripcion">
-                            Aprende a analizar grandes volúmenes de
-                            datos y transfórmalos en información valiosa
-                            para el negocio.
-                        </p>
+                    <div id="titulo1">
+                        <div class="titulo-curso1">
+                            <p class="titulo1">Data Analyst</p>
+                            <i class="fa-solid fa-square-poll-vertical"></i>
+                            <p class="descripcion">
+                                Aprende a analizar grandes volúmenes de
+                                datos y transfórmalos en información valiosa
+                                para el negocio.
+                            </p>
+
+                        </div>
                         <p id="precio">Precio: $<span class="precio">50000</span> ARS</p>
                         <a data-id="3" class="comprar-curso" href="#">comprar curso</a>
                         <a class="ver-curso" href="data-analyst.html">ver curso</a>
                     </div>
-                    <div id="message-container"></div>
                 </div>
                 <div class="curso">
-                    <div class="titulo-curso1">
-                        <p class="titulo1">C++</p>
-                        <i class="fa-solid fa-code"></i>
-                        <p class="descripcion">
-                            Aprenderas los conceptos fundamentales del
-                            paradigma programación orientada a objetos (POO)
-                            y poner en práctica los conceptos de POO usando el
-                            potente lenguaje C++ para escribir una aplicación.
-                        </p>
+                    <div id="titulo1">
+                        <div class="titulo-curso1">
+                            <p class="titulo1">C++</p>
+                            <i class="fa-solid fa-code"></i>
+                            <p class="descripcion">
+                                Aprenderas los conceptos fundamentales del
+                                paradigma programación orientada a objetos (POO)
+                                y poner en práctica los conceptos de POO usando el
+                                potente lenguaje C++ para escribir una aplicación.
+                            </p>
+                        </div>
                         <p id="precio">Precio: $<span class="precio">28000 ARS</span></p>
                         <a data-id="4" class="comprar-curso" href="#">comprar curso</a>
                         <a class="ver-curso" href="c++.html">ver curso</a>
                     </div>
-                    <div id="message-container"></div>
                 </div>
             </section>
 
@@ -250,8 +267,7 @@
                             <label for="mail">E-mail <input type="email" name="email" placeholder="Tu e-mail"
                                     required></label><br>
                             <label for="password">password <input type="password" size="8" maxlength="10"
-                                    name="password" placeholder="hasta 10 caracteres"
-                                    required></label><br>
+                                    name="password" placeholder="hasta 10 caracteres" required></label><br>
                             <label for="comenta">Dejanos tu consulta aqui:</label>
                             <textarea placeholder="Escribe tus dudas aqui..." name="textarea" rows="9"
                                 cols="8"></textarea>
