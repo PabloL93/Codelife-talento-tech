@@ -1,4 +1,4 @@
-//Variables//
+//--------------Variables---------------//
 const carrito = document.querySelector('#cart-modal');
 const listaCursos = document.querySelector("#li_cursos");
 const listaCarrito = document.querySelector('#cart-items tbody');
@@ -14,7 +14,6 @@ cargarEventListeners();
 function cargarEventListeners() {
     listaCursos.addEventListener("click", comprarCurso);
 
-    //Eliminar cursos del carrito
     carrito.addEventListener('click', eliminarCurso);
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -23,7 +22,7 @@ function cargarEventListeners() {
         carritoHTML();
     });
 
-    //Vaciar el carrito
+    //VACIAR CARRITO
     vaciarCarritoBtn.addEventListener("click", () => {
 
         articuloCarrito = [];
@@ -41,7 +40,7 @@ cerrabtn.addEventListener('click', () => {
     nav.classList.remove('visible');
 });
 
-  // Mostrar el carrito en el menú móvil
+  // CARRITO EN MENU MOVIL
   document.querySelectorAll('.cart-icon').forEach(icon => {
     icon.addEventListener('click', (e) => {
         e.preventDefault();
@@ -55,7 +54,7 @@ cerrabtn.addEventListener('click', () => {
 
 //--------------FUNCIONES-------------//
 
-//añadir al carrito
+//AÑADE UN CURSO
 function comprarCurso(e) {
     e.preventDefault();
     if (e.target.classList.contains("comprar-curso")) {
@@ -64,14 +63,13 @@ function comprarCurso(e) {
     }
 }
 
-//Eliminar curso del carrito
+//ELIMINA UN UN CURSO
 function eliminarCurso(e) {
     if (e.target.classList.contains('borrar-curso')) {
         const cursoId = e.target.getAttribute('data-id');
         const existe = articuloCarrito.some(curso => (curso.id === cursoId && curso.cantidad > 1));
 
         if (existe) {
-            //Actualizamos la cantidad
             const curso = articuloCarrito.map(curso => {
                 if (curso.id === cursoId) {
                     curso.cantidad--;
@@ -87,9 +85,8 @@ function eliminarCurso(e) {
     }
 }
 
-//Leer datos del curso
+//LEE DATOS DEL CURSO
 function leerDatosCurso(curso) {
-    //Crear un objeto con el contenido del curso actual
     infoCurso = {
         titulo: curso.querySelector('.titulo1').textContent,
         precio: parseFloat(curso.querySelector('.precio').textContent.replace('$', '').replace(' ARS', '')),
@@ -100,7 +97,6 @@ function leerDatosCurso(curso) {
     const existe = articuloCarrito.some(curso => curso.id === infoCurso.id);
 
     if (existe) {
-        //Actualizamos la cantidad
         const cursos = articuloCarrito.map(curso => {
             if (curso.id === infoCurso.id) {
                 curso.cantidad++;
@@ -140,7 +136,6 @@ function carritoHTML() {
 
     })
 
-    //Agregar el carrito de compras al storage
     sincronizarStorage();
     actualizarTotalPrice();
 }
@@ -150,20 +145,19 @@ function sincronizarStorage() {
     actualizarIconoCarrito();
 }
 
-//Limpiar el HTML //
 function limpiarHTML() {
     while (listaCarrito.firstChild) {
         listaCarrito.removeChild(listaCarrito.firstChild);
     }
 }
 
-//Actualizar el icono del carrito con cada compra
+//ACTUALIZAR CARRITO
 function actualizarIconoCarrito() {
     const cantidadTotal = articuloCarrito.reduce((total, curso) => total + curso.cantidad, 0);
     iconoCarrito.textContent = cantidadTotal;
 }
 
-//Actualizar el precio total
+//ACTUALIZA PRECIO FINAL
 function actualizarTotalPrice() {
     const totalPrice = articuloCarrito.reduce((total, curso) => total + (curso.precio * curso.cantidad), 0);
     totalPriceElement.textContent = `Total a pagar: $${totalPrice.toFixed(2)} ARS`;
