@@ -119,6 +119,65 @@ nav ul li {
     font-size: 12px;
 }
 
+/*menu de navegacion oculto */ 
+/* Estilos para el icono de menú */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+/* Estilos para el menú móvil */
+.mobile-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.mobile-menu ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .barra-de-navegacion {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+
+    .mobile-menu.active {
+        display: block;
+    }
+}
+
+/* menu de navegacion oculto */
 /* final HEADER*/
 /*--------------*/
 /*seccion Bienvenida*/
@@ -149,20 +208,6 @@ nav ul li {
     margin-bottom: 10px;
     display: flex;
     align-items: center;
-}
-
-
-.material-symbols-outlined {
-    font-size: 35px;
-    color: antiquewhite;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin: 6px;
-    font-variation-settings:
-        'FILL' 0,
-        'wght' 350,
-        'GRAD' 0,
-        'opsz' 24
 }
 
 /*final Bienvenida*/
@@ -220,21 +265,25 @@ nav ul li {
 @media (max-width: 768px) {
     .intro-video {
         flex-direction: column;
-        width: 90%;
+        width: 80%;
     }
 
     .Introduccion p {
-        width: 90%;
+        width: 80%;
         font-size: 16px;
     }
 
-    .video iframe {
+    .Introduccion iframe {
         width: 100%;
-        height: auto;
     }
 
     .Introduccion .seg-parrafo {
         font-size: 14px;
+    }
+
+    .Introduccion {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -255,7 +304,6 @@ nav ul li {
 .titulo-curso {
     padding-top: 3%;
     padding-bottom: 3%;
-
 }
 
 .titulo h2 {
@@ -263,9 +311,9 @@ nav ul li {
     text-align: center;
 }
 
+
 .curso {
     width: 250px;
-    height: 450px;
     margin: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
     background-color: rgba(45, 107, 127, 0.6);
@@ -276,9 +324,10 @@ nav ul li {
 }
 
 .curso:hover {
-    translate: 0 -10px;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1, 1.1);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);    
 }
+
 
 .titulo-curso1 {
     height: 300px;
@@ -333,16 +382,16 @@ nav ul li {
     text-align: center;
 }
 
-.curso #precio  {
-    font-size: 20px;
+.curso #precio {
+    font-size: 15px;
     color: #ffffff;
     text-align: center;
     padding-top: 10px;
- 
+
 }
 
 .precio {
-    font-size: 15px;
+    font-size: 17px;
     color: #ffffff;
     text-align: center;
     padding-top: 10px;
@@ -528,25 +577,27 @@ td {
 }
 
 
-.grid:hover > .item1:not(:hover) {
+.grid:hover>.item1:not(:hover) {
     filter: blur(5px);
     transform: scale(0.9, 0.9);
 }
+
 .grid .item2:hover {
     transform: scale(1.1, 1.1);
 }
 
 
-.grid:hover > .item2:not(:hover) {
+.grid:hover>.item2:not(:hover) {
     filter: blur(5px);
     transform: scale(0.9, 0.9);
 }
+
 .grid .item3:hover {
     transform: scale(1.1, 1.1);
 }
 
 
-.grid:hover > .item3:not(:hover) {
+.grid:hover>.item3:not(:hover) {
     filter: blur(5px);
     transform: scale(0.9, 0.9);
 }
