@@ -5,6 +5,9 @@ const listaCarrito = document.querySelector('#cart-items tbody');
 const vaciarCarritoBtn = document.querySelector('#vaciarCarrito');
 const iconoCarrito = document.querySelector('#add-to-cart');
 const totalPriceElement = document.querySelector('#total-price');
+const abrirbtn = document.querySelector('#menu-icon');
+const nav = document.querySelector('#mobile-menu');
+const cerrabtn = document.querySelector('#cerrar-boton');
 let articuloCarrito = [];
 
 cargarEventListeners();
@@ -30,6 +33,16 @@ function cargarEventListeners() {
 
     });
 }
+
+abrirbtn.addEventListener('click', () => {
+    nav.classList.add('visible');
+});
+
+cerrabtn.addEventListener('click', () => {
+    nav.classList.remove('visible');
+});
+
+
 
 //--------------FUNCIONES-------------//
 
@@ -146,12 +159,3 @@ function actualizarTotalPrice() {
     const totalPrice = articuloCarrito.reduce((total, curso) => total + (curso.precio * curso.cantidad), 0);
     totalPriceElement.textContent = `Total a pagar: $${totalPrice.toFixed(2)} ARS`;
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    const menuIcon = document.getElementById('menu-icon');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuIcon.addEventListener('click', () => {
-        mobileMenu.classList.toggle('active');
-    });
-});
