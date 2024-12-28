@@ -27,7 +27,7 @@ function cargarEventListeners() {
 
         limpiarHTML();
         sincronizarStorage();
-        
+
     });
 }
 
@@ -57,7 +57,6 @@ function eliminarCurso(e) {
                     return curso;
                 }
             });
-            articuloCarrito = [...curso]
         } else {
             articuloCarrito = articuloCarrito.filter(curso => curso.id !== cursoId);
         }
@@ -147,3 +146,12 @@ function actualizarTotalPrice() {
     const totalPrice = articuloCarrito.reduce((total, curso) => total + (curso.precio * curso.cantidad), 0);
     totalPriceElement.textContent = `Total a pagar: $${totalPrice.toFixed(2)} ARS`;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuIcon = document.getElementById('menu-icon');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuIcon.addEventListener('click', () => {
+        mobileMenu.classList.toggle('active');
+    });
+});
