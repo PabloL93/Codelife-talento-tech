@@ -32,15 +32,24 @@ function cargarEventListeners() {
         sincronizarStorage();
 
     });
-}
 
-abrirbtn.addEventListener('click', () => {
+    abrirbtn.addEventListener('click', () => {
     nav.classList.add('visible');
 });
 
 cerrabtn.addEventListener('click', () => {
     nav.classList.remove('visible');
 });
+
+  // Mostrar el carrito en el menú móvil
+  document.querySelectorAll('.cart-icon').forEach(icon => {
+    icon.addEventListener('click', (e) => {
+        e.preventDefault();
+        carrito.classList.toggle('visible');
+    });
+});
+
+}
 
 
 
