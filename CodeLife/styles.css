@@ -135,8 +135,9 @@ nav ul li {
 .mobile-menu {
     display: none;
     position: absolute;
-    top: 60px;
-    right: 20px;
+    top: 0;
+    right: 0;
+    padding: 2rem;
     background-color: #333;
     border-radius: 5px;
     overflow: hidden;
@@ -158,6 +159,12 @@ nav ul li {
     text-decoration: none;
 }
 
+.mobile-menu #cerrar-boton {
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .menu-icon {
@@ -169,7 +176,22 @@ nav ul li {
     }
 
     .mobile-menu {
-        display: none;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+
+    }
+
+    .mobile-menu.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
     }
 
     .mobile-menu.active {
