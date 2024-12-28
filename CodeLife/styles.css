@@ -91,8 +91,9 @@ p {
 }
 
 .header .boton-Ingresar button:hover {
-    color: rgb(43, 226, 116);
-    background: #5c7f2e;
+    color: rgb(0, 0, 0);
+    background: linear-gradient(#a4f7f7, #fff2f2, #bb9cff);
+    box-shadow: 0 0 5px rgb(255, 255, 255);
 }
 
 nav ul {
@@ -120,7 +121,7 @@ nav ul li {
 }
 
 /*menu de navegacion oculto */ 
-/* Estilos para el icono de menú */
+/* icono de menú */
 .menu-icon {
     display: none;
     cursor: pointer;
@@ -131,7 +132,7 @@ nav ul li {
     color: white;
 }
 
-/* Estilos para el menú móvil */
+/* menú móvil */
 .mobile-menu {
     display: none;
     position: absolute;
@@ -164,6 +165,32 @@ nav ul li {
     font-family: Arial, Helvetica, sans-serif;
     color: #ffffff;
 }
+
+/*-------CARRITO EN MENU MOVIL --------*/
+
+.mobile-menu .cart-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    color: white;
+}
+
+.mobile-menu .modal {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu .modal.visible {
+    display: flex;
+}
+
+/*------FINAL CARRITO EN MENU MOVIL ------*/
 
 /* Media Queries */
 @media (max-width: 768px) {
