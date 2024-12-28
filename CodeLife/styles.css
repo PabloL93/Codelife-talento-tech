@@ -259,6 +259,11 @@ nav ul li {
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .intro {
+        text-align: center;
+    }
+}
 /*final Bienvenida*/
 /*----------*/
 /*---reseña y video----*/
